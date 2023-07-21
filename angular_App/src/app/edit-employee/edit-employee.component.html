@@ -1,0 +1,33 @@
+
+<p class="head">
+  Edit Employee Details
+</p>
+<div style="text-align: -webkit-center;">
+    <ul style="padding-right: 25%;">
+      <label style="padding:32px;"> ID: </label>
+      <label > {{EmployeeData.id}} </label>
+    </ul>    
+    <ul>
+      <label style="padding: 18px">Name</label>
+      <input style="width: 25%" type="text" [(ngModel)]="EmployeeData.name"/>
+    </ul>
+    <ul>
+      <label>Location</label>
+      <select style="width: 24%" [(ngModel)]="EmployeeData.location">
+        <option *ngFor="let loc of LocList">
+          {{loc}}
+        </option>
+      </select>
+    </ul>
+    <ul>
+      <label style="padding: 16px">Mobile</label>
+      <input style="width: 25%" type="number" [(ngModel)]="EmployeeData.mobile"/>
+    </ul>
+    <ul> 
+      <button (click)="Cancel()" class="cancel-btn" >Cancel</button>
+      <button (click)="updateEmployee(EmployeeData)" class="update-btn" >Update</button>
+    </ul>
+   
+  </div>
+  
+  

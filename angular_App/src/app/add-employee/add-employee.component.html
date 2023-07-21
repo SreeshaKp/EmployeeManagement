@@ -1,0 +1,32 @@
+<p class="head">
+    Add Employee Details
+  </p>
+  
+  <div class="details-cls">
+    <ul>
+      <label style="padding: 29px" class="leftColumn"> ID: </label>
+      <input style="width: 25%" class="rightColumn" type="text" [(ngModel)]="id"/>
+    </ul>
+    <ul>
+      <label style="padding: 19px" class="leftColumn">Name:</label>
+      <input style="width: 25%" class="rightColumn" type="text" [(ngModel)]="name"/>
+    </ul>
+    <ul>
+      <label class="leftColumn">Location:</label>
+      <select style="width: 24%" class="rightColumn" [(ngModel)] ="location" >
+        <option *ngFor="let loc of LocList">
+          {{loc}}
+        </option>
+      </select>
+    </ul>
+    <ul>
+      <label style="padding: 17px;" class="leftColumn">Mobile:</label>
+      <input style="width: 25%" class="rightColumn" type="number" [(ngModel)]="mobile"/>
+    </ul>
+  
+    <ul>
+      <button (click)="Cancel()" style="font-weight: bold; color:red" >Cancel</button>
+      <button (click)="addEmployeeDetails()" style="font-weight: bold; color:green; margin-left:10px;" >Submit</button>
+    </ul>
+  
+  </div>

@@ -1,0 +1,27 @@
+<p class="head">
+    Employees Details
+   </p>
+   <br>
+   <div style="text-align: -webkit-center;">
+   <label> Name Search: </label>
+   <input type="text" [(ngModel)]="inputVal" />
+   
+   <table class="table-cls">
+     <thead>
+       <th>ID</th>
+       <th>Name</th>
+       <th>Location</th>     
+       <th>Mobile</th>
+       <th>Edit</th>     
+     </thead>
+     <tr *ngFor='let emp of employee |namefilter:inputVal'>
+       <td>{{emp.id}}</td>
+       <td>{{emp.name}}</td>
+       <td>{{emp.location}}</td>
+       <td>{{emp.mobile}}</td>
+       <td>
+         <a routerLink (click)="editEmpDetails(emp.id)">Edit</a>
+       </td>
+     </tr>
+   </table>
+  </div>
