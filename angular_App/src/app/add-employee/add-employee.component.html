@@ -34,36 +34,34 @@
 
 
 
-  <p class="head">
-    Add Employee Details
-  </p>
+  <p class="head"> Add Employee Details </p>
   
   <div class="details-cls">
       <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
     <ul>
-      <label style="padding: 29px" class="leftColumn"> ID: </label>
-      <input style="width: 25%" class="rightColumn" type="text" formControlName="id"/>
+      <label class="leftColumnId"> ID: </label>
+      <input class="rightColumn" type="text" formControlName="id"/>
     </ul>
     <ul>
-      <label style="padding: 19px" class="leftColumn">Name:</label>
-      <input style="width: 25%" class="rightColumn" type="text" formControlName="name"/>
+      <label class="leftColumnName">Name:</label>
+      <input class="rightColumn" type="text" formControlName="name"/>
     </ul>
     <ul>
       <label class="leftColumn">Location:</label>
-      <select style="width: 24%" class="rightColumn" formControlName ="location" >
+      <select class="rightColumnLoc" formControlName ="location" >
         <option *ngFor="let loc of LocList">
           {{loc}}
         </option>
       </select>
     </ul>
     <ul>
-      <label style="padding: 17px;" class="leftColumn">Mobile:</label>
-      <input style="width: 25%" class="rightColumn" type="number" formControlName="mobile"/>
+      <label class="leftColumnMob">Mobile:</label>
+      <input class="rightColumn" type="number" formControlName="mobile"/>
     </ul>
   
     <ul>
-      <button (click)="Cancel()" style="font-weight: bold; color:red" >Cancel</button>
-      <button type="submit" (click)="submit()" style="font-weight: bold; color:green; margin-left:10px;" >Submit</button>
+      <button class="cancelBtn" (click)="Cancel()">Cancel</button>
+      <button type="submit" class="submitBtn" (click)="submit()">Submit</button>
     </ul>
   </form>
   </div>
