@@ -2,26 +2,26 @@
 <p class="head">
   Edit Employee Details
 </p>
-<div style="text-align: -webkit-center;">
-    <ul style="padding-right: 25%;">
-      <label style="padding:32px;"> ID: </label>
+<div class="container">
+    <ul class="ul-cls">
+      <label class="label-id"> ID: </label>
       <label > {{EmployeeData.id}} </label>
     </ul>    
     <ul>
-      <label style="padding: 18px">Name</label>
-      <input style="width: 25%" type="text" [(ngModel)]="EmployeeData.name"/>
+      <label class="label-name">Name</label>
+      <input class="input-name" type="text" [(ngModel)]="EmployeeData.name"/>
     </ul>
     <ul>
       <label>Location</label>
-      <select style="width: 24%" [(ngModel)]="EmployeeData.location">
+      <select class="loc-cls" [(ngModel)]="EmployeeData.location">
         <option *ngFor="let loc of LocList">
           {{loc}}
         </option>
       </select>
     </ul>
     <ul>
-      <label style="padding: 16px">Mobile</label>
-      <input style="width: 25%" type="number" [(ngModel)]="EmployeeData.mobile"/>
+      <label class="label-mob">Mobile</label>
+      <input class="input-mob" type="number" [(ngModel)]="EmployeeData.mobile"/>
     </ul>
     <ul> 
       <button (click)="Cancel()" class="cancel-btn" >Cancel</button>
